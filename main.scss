@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
+
+$bg-color:#202035;
+$component-color:#1b1b30;
+$input-color:#2a2a42;
+$text-color:#bbbbd7;
+$border-color:#454564;
+$divider-color:#141428;
+$sidebar-text-color:#786cd5;
+$btn-bg-color:#786cf5;
+$category-color:#ff7e7e;
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+body {
+    background-color: $bg-color;
+    padding: 50px;
+}
+
+.component {
+    margin-left: 40px;
+    background-color: $component-color;
+    border-radius: 10px;
+
+    .divider {
+        background: $divider-color;
+        height: 2px;
+
+    }
+
+    &-help {
+        margin-bottom: 25px;
+        padding: 40px 50px;
+
+        h5 {
+            font-size: 36px;
+            font-weight: normal;
+            color: $text-color;
+            margin-bottom: 25px;
+
+        }
+
+        form {
+            width: 100%;
+
+            input {
+                width: 100%;
+                height: 72px;
+                border-radius: 5px;
+                padding: 0 40px 0 75px;
+                font-size: 18px;
+                color: #fff;
+                border: 1px solid $border-color;
+                background: $input-color url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.5'%3E%3Ccircle cx='11.6667' cy='11.6667' r='8.16667' stroke='white' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M24.5 24.5L17.5 17.5' stroke='white' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat 25px;
+
+                &:focus {
+                    border-color: lighten($border-color, $amount: 0);
+                }
+
+                &::placeholder {
+                    color: rgba(#fff, .6);
+                }
+            }
+        }
+    }
+
+    &-sidebar {
+        width: 307px;
+        padding: 30px;
+        margin-bottom: 25px;
+
+
+        h6 {
+            font-size: 18px;
+            color: $text-color;
+            margin-bottom: 15px;
+        }
+
+        nav {
+            ul {
+                li {
+                    a {
+                        display: block;
+                        font-size: 16px;
+                        padding: 5px 0;
+                        color: $sidebar-text-color;
+                        transition: 300ms color ease-in-out;
+
+                        &:hover {
+                            color: #fff;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        hr {
+
+            margin: 25px 0;
+        }
+
+        p {
+            font-size: 16px;
+            padding-right: 20px;
+            color: $text-color;
+            line-height: 24px;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 5px;
+            background-color: $btn-bg-color;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            transition: 300ms background-color ease-in-out;
+
+            &:hover {
+                background-color: darken($btn-bg-color, 5%);
+            }
+        }
+    }
+
+    &-list {
+        width: 60%;
+
+        ul {
+            hr {
+                margin: 0;
+            }
+
+            li {
+                margin: 10px;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+
+
+                a {
+                    display: flex;
+                    justify-content: space-between;
+
+                    padding: 30px;
+                    transition: 300ms transform ease-in-out;
+
+                    .inner {
+                        .title {
+                            display: block;
+                            font-size: 18px;
+                            font-weight: bold;
+                            color: $text-color;
+                            margin-bottom: 20px;
+                        }
+
+                        .description {
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: $text-color;
+                        }
+                    }
+
+                    .category {
+                        margin-left: 40px;
+                        display: inline-flex;
+                        height: 36px;
+                        align-items: center;
+                        padding: 0 18px;
+                        border-radius: 36px;
+                        color: $category-color;
+                        background-color: rgba($category-color, .1)
+                    }
+
+                    &:hover {
+                        transform: scale(1.02);
+                    }
+
+
+                }
+
+
+
+            }
+        }
+
+
+
+
+    }
+}
